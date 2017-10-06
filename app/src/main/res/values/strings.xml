@@ -1,0 +1,103 @@
+<resources>
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
+
+    <string name="app_name">Mobile Pattern</string>
+
+    <!--Action-->
+    <string name="action_save">Save</string>
+    <string name="action_ok">Ok</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_submit">Submit</string>
+    <string name="action_accept">Accept</string>
+    <string name="action_decline">Decline</string>
+    <string name="action_allow">OK</string>
+    <string name="action_deny">"Don't Allow"</string>
+    <string name="action_loading">Loading…</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_error_loading">Error loading data, Please try again later</string>
+    <string name="action_next">Next</string>
+    <string name="action_title_alert">Alert!!</string>
+
+    <!--Validate-->
+    <string name="msg_validate_password">Please fill password at least 6 characters</string>
+    <string name="msg_validate_password_not_match">Password and confirm password not match</string>
+    <string name="validate_header_feed_back_activity">Please fill header</string>
+    <string name="validate_desc_feed_back_activity">Please fill description</string>
+    <string name="validate_user_name_login_activity">Please fill username</string>
+    <string name="validate_password_login_activity">Please fill password at least 6 characters</string>
+    <string name="validate_email_format">Invalid email</string>
+    <string name="validate_name_empty">Please fill name</string>
+    <string name="validate_last_name_empty">Please fill last name</string>
+    <string name="validate_email_empty">Please fill e-mail</string>
+    <string name="validate_phone_empty">Please fill Mobile phone</string>
+    <string name="validate_phone_format">Invalid mobile phone</string>
+
+    <!--Title Activity-->
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_notifications">Notifications</string>
+    <string name="title_activity_changepassword">Change Password</string>
+    <string name="title_activity_changecurrency">Change Currency</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_activity_about">About Us</string>
+    <string name="title_activity_login">Sign In/Register</string>
+    <string name="title_activity_feed_back">Feed Back</string>
+    <string name="title_activity_forget">Forget Password</string>
+    <string name="title_activity_register">Register</string>
+
+    <!--SettingsActivity-->
+    <string name="menu_settings_activity_notification">Notifications</string>
+    <string name="menu_settings_activity_change_password">Change Password</string>
+    <string name="menu_settings_activity_feed_back">Feed Back</string>
+    <string name="menu_settings_activity_change_currency">Change Currency</string>
+    <string name="menu_settings_activity_change_language">เปลี่ยนเป็นภาษาไทย</string>
+    <string name="menu_settings_activity_change_language_sub">Change language to Thai</string>
+    <string name="menu_settings_activity_help">Help</string>
+    <string name="menu_settings_activity_about_us">About A Play Shopping</string>
+    <string name="menu_settings_activity_version">Version Application</string>
+    <!--NotificationActivity-->
+    <string name="menu_notification_activity_allow">Allow Notifications</string>
+    <string name="menu_notification_activity_news">News</string>
+    <string name="menu_notification_activity_promotion">Promotions</string>
+    <string name="menu_notification_activity_order">Order</string>
+    <string name="dialog_notification_title">\"A Play Shopping\" Would Like to Send You Notifications</string>
+    <string name="dialog_notification_desc">Notifications may include alerts, sounds and icon badges. These can be configured in Settings.</string>
+
+    <!--Change Password Activity-->
+    <string name="msg_old_password_change_pass_activity">Old Password</string>
+    <string name="msg_new_password_change_pass_activity">New Password</string>
+    <string name="msg_confirm_password_change_pass_activity">Confirm Password</string>
+    <string name="btn_change_change_pass_activity">Change Password</string>
+
+    <!--Language Activity-->
+    <string name="msg_choose_thai_language_activity">เลือกภาษา</string>
+    <string name="msg_choose_eng_language_activity">Select your languages</string>
+    <string name="msg_btn_choose_thai_language_activity">ไทย</string>
+    <string name="msg_btn_choose_eng_language_activity">English</string>
+
+    <!--Feed Back Activity-->
+    <string name="msg_topic_desc_feed_back_activity">Description</string>
+    <string name="msg_topic_header_feed_back_activity">Header</string>
+
+    <!--Sign in Activty-->
+    <string name="hint_user_name_login_activity">E-mail</string>
+    <string name="hint_password_login_activity">Password</string>
+    <string name="msg_register_login_activty">Register</string>
+    <string name="msg_forget_login_activty">Forget Password</string>
+
+    <!--Forget Password Activity-->
+    <string name="hint_email_forget_activity">E-mail</string>
+
+    <!--Regiser Activity-->
+    <string name="hint_name_register_activity">Name</string>
+    <string name="hint_last_name_register_activity">Last name</string>
+    <string name="hint_email_register_activity">E-mail</string>
+    <string name="hint_password_register_activity">Password</string>
+    <string name="hint_confirm_pass_register_activity">Confirm password</string>
+    <string name="hint_birth_day_register_activity">Birth day</string>
+    <string name="hint_phone_register_activity">Mobile phone</string>
+    <string name="hint_gender_activity">Gender</string>
+    <string name="hint_female_activity">female</string>
+    <string name="hint_male_activity">male</string>
+
+</resources>

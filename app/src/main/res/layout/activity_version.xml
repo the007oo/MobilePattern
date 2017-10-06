@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context="com.phattarapong.mobilepattern.activity.VersionActivity">
+
+    <include layout="@layout/layout_tool_bar_simple" />
+
+    <TextView
+        android:id="@+id/version_lable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="asdsadsad"
+        android:textAppearance="@style/TextAppearance.FontBold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/default_text_header_large"
+        android:textStyle="bold" />
+
+</LinearLayout>

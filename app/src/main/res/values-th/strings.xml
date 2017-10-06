@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
+
+    <string name="app_name">Mobile Pattern</string>
+
+    <!--Action-->
+    <string name="action_save">บันทึก</string>
+    <string name="action_ok">ตกลง</string>
+    <string name="action_cancel">ยกเลิก</string>
+    <string name="action_submit">ส่ง</string>
+    <string name="action_accept">ยืนยัน</string>
+    <string name="action_decline">ปฏิเสธ</string>
+    <string name="action_allow">อนุญาต</string>
+    <string name="action_deny">ไม่อนุญาต</string>
+    <string name="action_loading">กำลังดาวน์โหลด…</string>
+    <string name="action_retry">ลองใหม่อีกครั้ง</string>
+    <string name="action_error_loading">ดาวน์โหลดข้อมูลไม่สำเร็จ กรุณาลองใหม่อีกครั้ง</string>
+    <string name="action_next">ถัดไป</string>
+    <string name="action_title_alert">แจ้งเตือน!!</string>
+
+    <!--Validate-->
+    <string name="msg_validate_password">กรุณากรอกอย่างน้อย 6 อักขระ</string>
+    <string name="msg_validate_password_not_match">รหัสผ่านใหม่และยืนยันรหัสผ่านไม่ตรงกัน</string>
+    <string name="validate_header_feed_back_activity">กรุณากรอกหัวข้อ</string>
+    <string name="validate_desc_feed_back_activity">กรุณากรอกรายละเอียด</string>
+    <string name="validate_user_name_login_activity">กรุณากรอกชื่อผู้ใช้งาน</string>
+    <string name="validate_password_login_activity">กรุณากรอกอย่างน้อย 6 อักขระ</string>
+    <string name="validate_email_format">รูปแบบอีเมล์ผิดพลาด</string>
+
+    <!--Title Activity-->
+    <string name="title_activity_settings">ตั้งค่า</string>
+    <string name="title_activity_notifications">การแจ้งเตือน</string>
+    <string name="title_activity_changepassword">เปลี่ยนรหัสผ่าน</string>
+    <string name="title_activity_changecurrency">เปลี่ยนสกุลเงิน</string>
+    <string name="title_activity_help">ช่วยเหลือ</string>
+    <string name="title_activity_about">เกี่ยวกับ</string>
+    <string name="title_activity_login">เข้าสู่ระบบ/ลงทะเบียน</string>
+    <string name="title_activity_feed_back">ฟีดแบค</string>
+    <string name="title_activity_forget">ลืมรหัสผ่าน</string>
+    <string name="title_activity_register">สมัครสมาชิก</string>
+
+    <!--SettingsActivity-->
+    <string name="menu_settings_activity_notification">การแจ้งเตือน</string>
+    <string name="menu_settings_activity_change_password">เปลี่ยนรหัสผ่าน</string>
+    <string name="menu_settings_activity_feed_back">ฟีดแบค</string>
+    <string name="menu_settings_activity_change_currency">เปลี่ยนสกุลเงิน</string>
+    <string name="menu_settings_activity_change_language">Change language to English</string>
+    <string name="menu_settings_activity_change_language_sub">เปลี่ยนภาษา</string>
+    <string name="menu_settings_activity_help">ช่วยเหลือ</string>
+    <string name="menu_settings_activity_about_us">เกี่ยวกับ</string>
+    <string name="menu_settings_activity_version">เวอร์ชั่น</string>
+
+    <!--NotificationActivity-->
+    <string name="menu_notification_activity_allow">อนุญาตการแจ้งเตือน</string>
+    <string name="menu_notification_activity_news">ข่าวสาร</string>
+    <string name="menu_notification_activity_promotion">โปรโมชั่น</string>
+    <string name="menu_notification_activity_order">คำสั่งซื้อ</string>
+    <string name="dialog_notification_title">\"A Play Shopping\" ต้องการที่จะส่ง\nการแจ้งเตือนให้คุณ</string>
+    <string name="dialog_notification_desc">การแจ้งเตือนอาจจะรวมถึงการเตือน เสียงและป้ายกำกับไอคอน การแจ้งเตือนเหล้านี้ถูกกำหนดค่าได้ที่การตั้งค่า</string>
+
+    <!--Change Password Activity-->
+    <string name="msg_old_password_change_pass_activity">รหัสผ่านปัจจุบัน</string>
+    <string name="msg_new_password_change_pass_activity">รหัสผ่านใหม่</string>
+    <string name="msg_confirm_password_change_pass_activity">ยืนยันรหัสผ่าน</string>
+    <string name="btn_change_change_pass_activity">เปลี่ยนรหัสผ่าน</string>
+
+
+    <!--Language Activity-->
+    <string name="msg_choose_thai_language_activity">เลือกภาษา</string>
+    <string name="msg_choose_eng_language_activity">Select your languages</string>
+    <string name="msg_btn_choose_thai_language_activity">ไทย</string>
+    <string name="msg_btn_choose_eng_language_activity">English</string>
+
+    <!--Feed Back Activity-->
+    <string name="msg_topic_desc_feed_back_activity">รายละเอียด</string>
+    <string name="msg_topic_header_feed_back_activity">หัวข้อ</string>
+
+    <!--Sign in Activty-->
+    <string name="hint_user_name_login_activity">อีเมล์</string>
+    <string name="hint_password_login_activity">รหัสผ่าน</string>
+    <string name="msg_register_login_activty">สมัครสมาชิก</string>
+    <string name="msg_forget_login_activty">ลืมรหัสผ่าน</string>
+
+    <!--Forget Password Activity-->
+    <string name="hint_email_forget_activity">อีเมล์</string>
+
+    <!--Regiser Activity-->
+    <string name="hint_name_register_activity">ชื่อ</string>
+    <string name="hint_last_name_register_activity">นามสกุล</string>
+    <string name="hint_email_register_activity">อีเมล์</string>
+    <string name="hint_password_register_activity">รหัสผ่าน</string>
+    <string name="hint_confirm_pass_register_activity">ยืนยันรหัสผ่าน</string>
+    <string name="hint_birth_day_register_activity">วันเกิด</string>
+    <string name="hint_phone_register_activity">หมายเลขโทรศัพท์</string>
+    <string name="hint_gender_activity">เพศ</string>
+    <string name="hint_female_activity">หญิง</string>
+    <string name="hint_male_activity">ชาย</string>
+
+</resources>

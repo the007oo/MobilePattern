@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.phattarapong.mobilepattern.activity.LoginActivity">
+
+    <include layout="@layout/layout_tool_bar_notification" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/default_margin_padding_large">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="@dimen/default_margin_padding_extra_extra_large"
+            android:layout_marginBottom="@dimen/default_margin_padding_normal"
+            android:id="@+id/user_name_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_user_name_login_activity"
+            android:orientation="vertical">
+
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/user_name_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textIsSelectable="false" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/password_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_password_login_activity"
+            android:orientation="vertical"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/gray">
+
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/password_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textIsSelectable="false" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:padding="@dimen/default_margin_padding_normal">
+
+            <TextView
+                android:textAppearance="@style/TextAppearance.FontBold"
+                android:id="@+id/forgetLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_forget_login_activty"
+                android:textColor="@color/text_gray"
+                />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/default_margin_padding_normal"
+                android:layout_marginRight="@dimen/default_margin_padding_normal"
+                android:background="@color/bg_divider" />
+
+
+            <TextView
+                android:textAppearance="@style/TextAppearance.FontBold"
+                android:id="@+id/registerLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/default_margin_padding_normal"
+                android:text="@string/msg_register_login_activty"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_padding_extra_large"
+            android:background="@drawable/shape_btn_blue"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:text="@string/action_submit"
+            android:textAppearance="@style/TextAppearance.ButtonNormal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/dark_blue_primary" />
+
+    </LinearLayout>
+
+</LinearLayout>
