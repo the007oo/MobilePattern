@@ -49,7 +49,7 @@ public abstract class ProgressActivity extends PermissionActivity {
     }
 
     protected boolean validatePassword(String text) {
-        return text.length() <= 6;
+        return text.length() < 6;
     }
 
     protected boolean validateConfirmPasswordNotMatch(String text, String text2) {

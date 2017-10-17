@@ -16,7 +16,7 @@ public class VersionActivity extends ToolBarSimpleActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_version);
-        versionLable = (TextView) findViewById(R.id.version_lable);
+        versionLable = (TextView) findViewById(R.id.versionLable);
         versionLable.setText("เวอร์ชั่น : " + BuildConfig.VERSION_NAME);
 
         initWidget();

@@ -29,7 +29,7 @@ public class SettingsActivity extends ToolBarNotificationActivity {
         setTitleToolBar(getResources().getString(R.string.title_activity_settings));
         hideBackButton();
 
-        flagLanguageImageView = (ImageView) findViewById(R.id.flag_language_image_view);
+        flagLanguageImageView = (ImageView) findViewById(R.id.flagLanguageImageView);
 
         if (getLanguage().equals("th")) {
             flagLanguageImageView.setImageResource(R.drawable.ic_en_flag);
@@ -37,13 +37,13 @@ public class SettingsActivity extends ToolBarNotificationActivity {
             flagLanguageImageView.setImageResource(R.drawable.ic_th_flag);
         }
 
-        changeLanguageLayout = (LinearLayout) findViewById(R.id.change_language_layout);
-        notificationLayout = (LinearLayout) findViewById(R.id.notification_layout);
-        changePasswordLayout = (LinearLayout) findViewById(R.id.changepassword_layout);
-        versionLayout = (LinearLayout) findViewById(R.id.version_layout);
-        helpLayout = (LinearLayout) findViewById(R.id.help_layout);
-        aboutUsLayout = (LinearLayout) findViewById(R.id.aboutus_layout);
-        feedbackLayout = (LinearLayout) findViewById(R.id.feedbackLayout);
+        changeLanguageLayout = (LinearLayout) findViewById(R.id.changeLanguageLayout);
+        notificationLayout = (LinearLayout) findViewById(R.id.notificationLayout);
+        changePasswordLayout = (LinearLayout) findViewById(R.id.changePasswordLayout);
+        versionLayout = (LinearLayout) findViewById(R.id.versionLayout);
+        helpLayout = (LinearLayout) findViewById(R.id.helpLayout);
+        aboutUsLayout = (LinearLayout) findViewById(R.id.aboutUsLayout);
+        feedbackLayout = (LinearLayout) findViewById(R.id.feedBackLayout);
 
         changeLanguageLayout.setOnClickListener(this);
         notificationLayout.setOnClickListener(this);
@@ -59,23 +59,23 @@ public class SettingsActivity extends ToolBarNotificationActivity {
     public void onClick(View v) {
         super.onClick(v);
 
-        if (v.getId() == R.id.change_language_layout) {
+        if (v.getId() == R.id.changeLanguageLayout) {
             if (getLanguage().equals("th")) {
                 setLanguage("en");
             } else if (getLanguage().equals("en")) {
                 setLanguage("th");
             }
-        } else if (v.getId() == R.id.notification_layout) {
+        } else if (v.getId() == R.id.notificationLayout) {
             startActivityNoAnimation(NotificationActivity.class);
-        } else if (v.getId() == R.id.changepassword_layout) {
+        } else if (v.getId() == R.id.changePasswordLayout) {
             startActivityNoAnimation(ChangePasswordActivity.class);
-        } else if (v.getId() == R.id.version_layout) {
+        } else if (v.getId() == R.id.versionLayout) {
             startActivityNoAnimation(VersionActivity.class);
-        } else if (v.getId() == R.id.help_layout) {
+        } else if (v.getId() == R.id.helpLayout) {
             startActivityNoAnimation(HelpActivity.class);
-        } else if (v.getId() == R.id.aboutus_layout) {
+        } else if (v.getId() == R.id.aboutUsLayout) {
             startActivityNoAnimation(AboutUsActivity.class);
-        } else if (v.getId() == R.id.feedbackLayout) {
+        } else if (v.getId() == R.id.feedBackLayout) {
             startActivityNoAnimation(FeedBackActivity.class);
         }
 

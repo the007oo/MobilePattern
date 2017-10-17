@@ -18,29 +18,29 @@
             android:paddingRight="@dimen/default_margin_padding_large">
 
             <ImageView
-                android:id="@+id/previous_image_view"
+                android:id="@+id/previousImageView"
                 android:layout_width="@dimen/s_image_size"
                 android:layout_height="@dimen/s_image_size"
                 android:layout_centerVertical="true"
                 android:src="@drawable/ic_previous" />
 
             <ImageView
-                android:id="@+id/next_image_view"
+                android:id="@+id/nextImageView"
                 android:layout_width="@dimen/s_image_size"
                 android:layout_height="@dimen/s_image_size"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/default_margin_padding_large"
-                android:layout_toRightOf="@id/previous_image_view"
+                android:layout_toRightOf="@id/previousImageView"
                 android:src="@drawable/ic_next" />
 
             <RelativeLayout
-                android:id="@+id/title_layout"
+                android:id="@+id/titleLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true">
 
                 <TextView
-                    android:id="@+id/title_label"
+                    android:id="@+id/titleLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -50,10 +50,10 @@
                     android:textSize="@dimen/default_text_header_large" />
 
                 <TextView
-                    android:id="@+id/url_label"
+                    android:id="@+id/urlLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/title_label"
+                    android:layout_below="@id/titleLabel"
                     android:layout_centerHorizontal="true"
                     android:text="http://aplayshoppign.com"
                     android:textAppearance="@style/TextAppearance.FontBold"
@@ -63,7 +63,7 @@
             </RelativeLayout>
 
             <ImageView
-                android:id="@+id/close_image_view"
+                android:id="@+id/closeImageView"
                 android:layout_width="@dimen/s_image_size"
                 android:layout_height="@dimen/s_image_size"
                 android:layout_alignParentRight="true"
@@ -71,12 +71,12 @@
                 android:src="@drawable/ic_close_black" />
 
             <ImageView
-                android:id="@+id/share_image_view"
+                android:id="@+id/shareImageView"
                 android:layout_width="@dimen/s_image_size"
                 android:layout_height="@dimen/m_image_size"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/default_margin_padding_large"
-                android:layout_toStartOf="@id/close_image_view"
+                android:layout_toStartOf="@id/closeImageView"
                 android:paddingBottom="@dimen/default_margin_padding_small"
                 android:src="@drawable/ic_black_share" />
 

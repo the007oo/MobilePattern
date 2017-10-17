@@ -39,8 +39,8 @@ public class DialogiOS {
         dialog.setContentView(R.layout.dialog_request_notification);
         dialog.setCancelable(cancelable);
 
-        TextView denyLabel =  dialog.findViewById(R.id.deny_label);
-        TextView allowLabel =  dialog.findViewById(R.id.allow_label);
+        TextView denyLabel =  dialog.findViewById(R.id.denyLabel);
+        TextView allowLabel =  dialog.findViewById(R.id.allowLabel);
 
         denyLabel.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -41,20 +41,20 @@ public class ChangePasswordActivity extends ToolBarSimpleActivity {
         super.initWidget();
         setTitleToolBar(getResources().getString(R.string.title_activity_changepassword));
 
-        linearLayout = (LinearLayout) findViewById(R.id.content_layout);
+        linearLayout = (LinearLayout) findViewById(R.id.contentLayout);
 
-        emailLabel = (TextView) findViewById(R.id.email_label);
+        emailLabel = (TextView) findViewById(R.id.emailLabel);
         //emailLabel.setText(memberPreference.getValueString(memberPreference.MEMBER_EMAIL));
 
-        oldPasswordBox = (TextInputEditText) findViewById(R.id.old_password_box);
-        newPasswordBox = (TextInputEditText) findViewById(R.id.new_password_box);
-        confirmPasswordBox = (TextInputEditText) findViewById(R.id.confirm_password_box);
+        oldPasswordBox = (TextInputEditText) findViewById(R.id.oldPasswordBox);
+        newPasswordBox = (TextInputEditText) findViewById(R.id.newPasswordBox);
+        confirmPasswordBox = (TextInputEditText) findViewById(R.id.confirmPasswordBox);
 
-        oldPasswordTextLayout = (TextInputLayout) findViewById(R.id.old_password_text_layout);
-        newPasswordTextLayout = (TextInputLayout) findViewById(R.id.new_password_text_layout);
-        confirmPasswordTextLayout = (TextInputLayout) findViewById(R.id.confirm_password_text_layout);
+        oldPasswordTextLayout = (TextInputLayout) findViewById(R.id.oldPasswordTextLayout);
+        newPasswordTextLayout = (TextInputLayout) findViewById(R.id.newPasswordTextLayout);
+        confirmPasswordTextLayout = (TextInputLayout) findViewById(R.id.confirmPasswordTextLayout);
 
-        changePasswordBtn = (Button) findViewById(R.id.change_password_btn);
+        changePasswordBtn = (Button) findViewById(R.id.changePasswordBtn);
         changePasswordBtn.setOnClickListener(this);
 
         setViewOldPasswordBox();
@@ -64,7 +64,6 @@ public class ChangePasswordActivity extends ToolBarSimpleActivity {
     }
 
     private void setViewOldPasswordBox() {
-
         oldPasswordBox.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {
@@ -80,7 +79,6 @@ public class ChangePasswordActivity extends ToolBarSimpleActivity {
                 }
             }
         });
-
     }
 
     private void setViewNewPasswordBox() {
@@ -147,26 +145,26 @@ public class ChangePasswordActivity extends ToolBarSimpleActivity {
 
         if (!validateConfirmPasswordNotMatch(newPass, confirmPass)) {
             confirmPasswordTextLayout.setError(getResources().getString(R.string.msg_validate_password_not_match));
-
             check = false;
         }
         if (validatePassword(confirmPass)) {
             confirmPasswordTextLayout.setError(getResources().getString(R.string.msg_validate_password));
-
             check = false;
         }
         if (validatePassword(newPass)) {
             newPasswordTextLayout.setError(getResources().getString(R.string.msg_validate_password));
-
             check = false;
         }
+
         if (validatePassword(oldPass)) {
             oldPasswordTextLayout.setError(getResources().getString(R.string.msg_validate_password));
-
             check = false;
         }
 
         if (check) {
+            confirmPasswordTextLayout.setErrorEnabled(false);
+            newPasswordTextLayout.setErrorEnabled(false);
+            oldPasswordTextLayout.setErrorEnabled(false);
             shortToast("Success");
         }
 
@@ -182,7 +180,7 @@ public class ChangePasswordActivity extends ToolBarSimpleActivity {
     @Override
     public void onClick(View v) {
         super.onClick(v);
-        if (v.getId() == R.id.change_password_btn) {
+        if (v.getId() == R.id.changePasswordBtn) {
             validateText();
         }
     }

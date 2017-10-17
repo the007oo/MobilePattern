@@ -27,7 +27,7 @@ public class HelpActivity extends ToolBarWebViewActivity {
     @Override
     protected void initWidget() {
         super.initWidget();
-        webView = (WebView) findViewById(R.id.web_view);
+        webView = (WebView) findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient() {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -55,15 +55,15 @@ public class HelpActivity extends ToolBarWebViewActivity {
     @Override
     public void onClick(View view) {
         super.onClick(view);
-        if (view.getId() == R.id.share_image_view) {
+        if (view.getId() == R.id.shareImageView) {
             shareUrl(URL);
-        } else if (view.getId() == R.id.previous_image_view) {
+        } else if (view.getId() == R.id.previousImageView) {
             if (webView.canGoBack()) {
                 webView.goBack();
             } else {
                 onBackPressed();
             }
-        } else if (view.getId() == R.id.next_image_view) {
+        } else if (view.getId() == R.id.nextImageView) {
             webView.goForward();
         }
     }

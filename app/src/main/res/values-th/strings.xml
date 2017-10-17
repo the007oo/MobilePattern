@@ -28,6 +28,12 @@
     <string name="validate_user_name_login_activity">กรุณากรอกชื่อผู้ใช้งาน</string>
     <string name="validate_password_login_activity">กรุณากรอกอย่างน้อย 6 อักขระ</string>
     <string name="validate_email_format">รูปแบบอีเมล์ผิดพลาด</string>
+    <string name="validate_name_empty">กรุณากรอกชื่อ</string>
+    <string name="validate_last_name_empty">กรุณากรอกนามสกุล</string>
+    <string name="validate_email_empty">กรุณากรอกอีเมล์</string>
+    <string name="validate_phone_empty">กรุณากรอกหมายเลขโทรศัพท์</string>
+    <string name="validate_phone_format">รูปแบบหมายเลขโทรศัพท์ผิดพลาด</string>
+
 
     <!--Title Activity-->
     <string name="title_activity_settings">ตั้งค่า</string>

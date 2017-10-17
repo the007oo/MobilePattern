@@ -30,7 +30,7 @@
             android:textAppearance="@style/TextAppearance.FontBold"></TextView>
 
         <Switch
-            android:id="@+id/allow_switch"
+            android:id="@+id/allowSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -44,7 +44,7 @@
         android:background="@color/bg_divider" />
 
     <LinearLayout
-        android:id="@+id/sub_notification_layout"
+        android:id="@+id/subNotificationLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/bottom_bar_height"
@@ -71,7 +71,7 @@
                 android:textAppearance="@style/TextAppearance.FontBold"></TextView>
 
             <Switch
-                android:id="@+id/new_switch"
+                android:id="@+id/newSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -99,7 +99,7 @@
                 android:textAppearance="@style/TextAppearance.FontBold"></TextView>
 
             <Switch
-                android:id="@+id/promotions_switch"
+                android:id="@+id/promotionsSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -128,7 +128,7 @@
                 android:textAppearance="@style/TextAppearance.FontBold"></TextView>
 
             <Switch
-                android:id="@+id/order_switch"
+                android:id="@+id/orderSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"

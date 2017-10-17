@@ -51,20 +51,20 @@ public class RegisterActivity extends ToolBarSimpleActivity implements DatePicke
         setTitleToolBar(getString(R.string.title_activity_register));
 
         registerButton = (Button) findViewById(R.id.registerButton);
-        phonetextlayout = (TextInputLayout) findViewById(R.id.phone_text_layout);
-        phonebox = (TextInputEditText) findViewById(R.id.phone_box);
-        birthdaytextlayout = (TextInputLayout) findViewById(R.id.birth_day_text_layout);
-        birthdaybox = (TextInputEditText) findViewById(R.id.birth_day_box);
-        confirmpasswordtextlayout = (TextInputLayout) findViewById(R.id.confirm_password_text_layout);
-        confirmpasswordbox = (TextInputEditText) findViewById(R.id.confirm_password_box);
-        passwordtextlayout = (TextInputLayout) findViewById(R.id.password_text_layout);
-        passwordbox = (TextInputEditText) findViewById(R.id.password_box);
-        emailtextlayout = (TextInputLayout) findViewById(R.id.email_text_layout);
-        emailbox = (TextInputEditText) findViewById(R.id.email_box);
-        lastnametextlayout = (TextInputLayout) findViewById(R.id.last_name_text_layout);
-        lastnamepasswordbox = (TextInputEditText) findViewById(R.id.last_name_password_box);
-        nametextlayout = (TextInputLayout) findViewById(R.id.name_text_layout);
-        namepasswordbox = (TextInputEditText) findViewById(R.id.name_password_box);
+        phonetextlayout = (TextInputLayout) findViewById(R.id.phoneTextLayout);
+        phonebox = (TextInputEditText) findViewById(R.id.phoneBox);
+        birthdaytextlayout = (TextInputLayout) findViewById(R.id.birthDayTextLayout);
+        birthdaybox = (TextInputEditText) findViewById(R.id.birthDayBox);
+        confirmpasswordtextlayout = (TextInputLayout) findViewById(R.id.confirmPasswordTextLayout);
+        confirmpasswordbox = (TextInputEditText) findViewById(R.id.confirmPasswordBox);
+        passwordtextlayout = (TextInputLayout) findViewById(R.id.passwordTextLayout);
+        passwordbox = (TextInputEditText) findViewById(R.id.passwordBox);
+        emailtextlayout = (TextInputLayout) findViewById(R.id.emailTextLayout);
+        emailbox = (TextInputEditText) findViewById(R.id.emailBox);
+        lastnametextlayout = (TextInputLayout) findViewById(R.id.lastNameTextLayout);
+        lastnamepasswordbox = (TextInputEditText) findViewById(R.id.lastNamePasswordBox);
+        nametextlayout = (TextInputLayout) findViewById(R.id.nameTextLayout);
+        namepasswordbox = (TextInputEditText) findViewById(R.id.namePasswordBox);
         maleRadioButton = (RadioButton) findViewById(R.id.maleRadioButton);
         femaleRadioButton = (RadioButton) findViewById(R.id.femaleRadioButton);
 
@@ -167,7 +167,7 @@ public class RegisterActivity extends ToolBarSimpleActivity implements DatePicke
                         emailtextlayout.setEnabled(true);
                         emailtextlayout.setError(getResources().getString(R.string.validate_email_empty));
                     } else {
-                        if (!validateEmail(emailbox.getText().toString())) {
+                        if (validateEmail(emailbox.getText().toString())) {
                             emailtextlayout.setEnabled(true);
                             emailtextlayout.setError(getResources().getString(R.string.validate_email_format));
                         } else {
@@ -292,7 +292,7 @@ public class RegisterActivity extends ToolBarSimpleActivity implements DatePicke
     public void onClick(View v) {
         super.onClick(v);
         switch (v.getId()) {
-            case R.id.birth_day_box:
+            case R.id.birthDayBox:
                 datePickerDialog.show();
                 break;
             case R.id.registerButton:

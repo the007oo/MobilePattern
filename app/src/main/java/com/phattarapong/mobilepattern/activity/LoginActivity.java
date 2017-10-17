@@ -36,10 +36,10 @@ public class LoginActivity extends ToolBarNotificationActivity {
         submitButton = (Button) findViewById(R.id.submitButton);
         forgetLabel = (TextView) findViewById(R.id.forgetLabel);
         registerLabel = (TextView) findViewById(R.id.registerLabel);
-        passwordtextlayout = (TextInputLayout) findViewById(R.id.password_text_layout);
-        passwordbox = (TextInputEditText) findViewById(R.id.password_box);
-        usernametextlayout = (TextInputLayout) findViewById(R.id.user_name_text_layout);
-        usernamebox = (TextInputEditText) findViewById(R.id.user_name_box);
+        passwordtextlayout = (TextInputLayout) findViewById(R.id.passwordTextLayout);
+        passwordbox = (TextInputEditText) findViewById(R.id.passwordBox);
+        usernametextlayout = (TextInputLayout) findViewById(R.id.userNameTextLayout);
+        usernamebox = (TextInputEditText) findViewById(R.id.userNameBox);
 
         submitButton.setOnClickListener(this);
         forgetLabel.setOnClickListener(this);

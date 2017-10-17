@@ -30,15 +30,15 @@ public class ForgetPasswordActivity extends ToolBarSimpleActivity {
         setTitleToolBar(getString(R.string.title_activity_forget));
 
         submitButton = (Button) findViewById(R.id.submitButton);
-        emailtextlayout = (TextInputLayout) findViewById(R.id.email_text_layout);
-        emailbox = (TextInputEditText) findViewById(R.id.email_box);
+        emailtextlayout = (TextInputLayout) findViewById(R.id.emailTextLayout);
+        emailbox = (TextInputEditText) findViewById(R.id.emailBox);
 
         submitButton.setOnClickListener(this);
     }
 
     private void validateText() {
         String msg = "";
-        if (!validateEmail(emailbox.getText().toString())) {
+        if (validateEmail(emailbox.getText().toString())) {
             msg = getString(R.string.validate_email_format);
         }
 

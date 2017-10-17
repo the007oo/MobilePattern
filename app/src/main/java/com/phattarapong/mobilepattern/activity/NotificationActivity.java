@@ -36,11 +36,11 @@ public class NotificationActivity extends ToolBarNotificationActivity {
 
         setTitleToolBar(getResources().getString(R.string.title_activity_notifications));
 
-        allowSwitch = (Switch) findViewById(R.id.allow_switch);
-        newSwitch = (Switch) findViewById(R.id.new_switch);
-        promotionsSwitch = (Switch) findViewById(R.id.promotions_switch);
-        orderSwitch = (Switch) findViewById(R.id.order_switch);
-        subNotificationLayout = (LinearLayout) findViewById(R.id.sub_notification_layout);
+        allowSwitch = (Switch) findViewById(R.id.allowSwitch);
+        newSwitch = (Switch) findViewById(R.id.newSwitch);
+        promotionsSwitch = (Switch) findViewById(R.id.promotionsSwitch);
+        orderSwitch = (Switch) findViewById(R.id.orderSwitch);
+        subNotificationLayout = (LinearLayout) findViewById(R.id.subNotificationLayout);
 
         checkNotification();
     }

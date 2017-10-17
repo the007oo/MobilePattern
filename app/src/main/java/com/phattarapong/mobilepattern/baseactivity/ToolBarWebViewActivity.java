@@ -21,12 +21,12 @@ public abstract class ToolBarWebViewActivity extends ProgressActivity implements
     protected void initWidget() {
         super.initWidget();
 
-        previousImageView = (ImageView) findViewById(R.id.previous_image_view);
-        nextImageView = (ImageView) findViewById(R.id.next_image_view);
-        closeImageView = (ImageView) findViewById(R.id.close_image_view);
-        shareImageView = (ImageView) findViewById(R.id.share_image_view);
-        titleLabel = (TextView) findViewById(R.id.title_label);
-        urlLabel = (TextView) findViewById(R.id.url_label);
+        previousImageView = (ImageView) findViewById(R.id.previousImageView);
+        nextImageView = (ImageView) findViewById(R.id.nextImageView);
+        closeImageView = (ImageView) findViewById(R.id.closeImageView);
+        shareImageView = (ImageView) findViewById(R.id.shareImageView);
+        titleLabel = (TextView) findViewById(R.id.titleLabel);
+        urlLabel = (TextView) findViewById(R.id.urlLabel);
 
         closeImageView.setOnClickListener(this);
         shareImageView.setOnClickListener(this);
@@ -52,7 +52,7 @@ public abstract class ToolBarWebViewActivity extends ProgressActivity implements
 
     @Override
     public void onClick(View view) {
-        if (view.getId() == R.id.close_image_view) {
+        if (view.getId() == R.id.closeImageView) {
             finish();
         }
     }
