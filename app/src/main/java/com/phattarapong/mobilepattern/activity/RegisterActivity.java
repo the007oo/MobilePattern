@@ -9,9 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.phattarapong.mobilepattern.R;
 import com.phattarapong.mobilepattern.baseactivity.ToolBarSimpleActivity;
+import com.phattarapong.mobilepattern.manager.ValidateManager;
 
 import java.util.Calendar;
 
@@ -68,12 +70,6 @@ public class RegisterActivity extends ToolBarSimpleActivity implements DatePicke
         maleRadioButton = (RadioButton) findViewById(R.id.maleRadioButton);
         femaleRadioButton = (RadioButton) findViewById(R.id.femaleRadioButton);
 
-        setUpNameBox();
-        setUpLastNameBox();
-        setUpEmailBox();
-        setUpPasswordBox();
-        setUpConfirmPasswordBox();
-        setUpPhone();
         initDialogBirthDay();
         registerButton.setOnClickListener(this);
         birthdaybox.setOnClickListener(this);
@@ -92,128 +88,6 @@ public class RegisterActivity extends ToolBarSimpleActivity implements DatePicke
         updateCurrentDate();
     }
 
-    private void setUpPhone() {
-        phonebox.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                if (b) {
-                    phonetextlayout.setError(null);
-                } else {
-                    if (passwordbox.length() < 0) {
-                        phonetextlayout.setEnabled(true);
-                        phonetextlayout.setError(getResources().getString(R.string.validate_phone_empty));
-                    } else {
-                        if (phonebox.length() < 10) {
-                            phonetextlayout.setEnabled(true);
-                            phonetextlayout.setError(getResources().getString(R.string.validate_phone_format));
-                        } else {
-                            phonetextlayout.setError(null);
-                        }
-                    }
-                }
-            }
-        });
-    }
-
-    private void setUpConfirmPasswordBox() {
-        confirmpasswordbox.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                if (b) {
-                    confirmpasswordtextlayout.setError(null);
-                } else {
-                    if (confirmpasswordbox.length() < 6) {
-                        confirmpasswordtextlayout.setEnabled(true);
-                        confirmpasswordtextlayout.setError(getResources().getString(R.string.msg_validate_password));
-                    } else {
-                        if (confirmpasswordbox.getText().toString().equals(passwordbox.getText().toString())) {
-                            confirmpasswordtextlayout.setError(null);
-                        } else {
-                            confirmpasswordtextlayout.setEnabled(true);
-                            confirmpasswordtextlayout.setError(getResources().getString(R.string.msg_validate_password_not_match));
-                        }
-                    }
-                }
-            }
-        });
-    }
-
-    private void setUpPasswordBox() {
-        passwordbox.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                if (b) {
-                    passwordtextlayout.setError(null);
-                } else {
-                    if (passwordbox.length() < 6) {
-                        passwordtextlayout.setEnabled(true);
-                        passwordtextlayout.setError(getResources().getString(R.string.msg_validate_password));
-                    } else {
-                        passwordtextlayout.setError(null);
-                    }
-                }
-            }
-        });
-    }
-
-    private void setUpEmailBox() {
-        emailbox.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                if (b) {
-                    emailtextlayout.setError(null);
-                } else {
-                    if (emailbox.length() < 0) {
-                        emailtextlayout.setEnabled(true);
-                        emailtextlayout.setError(getResources().getString(R.string.validate_email_empty));
-                    } else {
-                        if (validateEmail(emailbox.getText().toString())) {
-                            emailtextlayout.setEnabled(true);
-                            emailtextlayout.setError(getResources().getString(R.string.validate_email_format));
-                        } else {
-                            emailtextlayout.setError(null);
-                        }
-                    }
-                }
-            }
-        });
-    }
-
-    private void setUpLastNameBox() {
-        lastnamepasswordbox.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                if (b) {
-                    lastnametextlayout.setError(null);
-                } else {
-                    if (validateEmptyText(lastnamepasswordbox.getText().toString())) {
-                        lastnametextlayout.setEnabled(true);
-                        lastnametextlayout.setError(getResources().getString(R.string.validate_last_name_empty));
-                    } else {
-                        lastnametextlayout.setError(null);
-                    }
-                }
-            }
-        });
-    }
-
-    private void setUpNameBox() {
-        namepasswordbox.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                if (b) {
-                    nametextlayout.setError(null);
-                } else {
-                    if (validateEmptyText(namepasswordbox.getText().toString())) {
-                        nametextlayout.setEnabled(true);
-                        nametextlayout.setError(getResources().getString(R.string.validate_name_empty));
-                    } else {
-                        nametextlayout.setError(null);
-                    }
-                }
-            }
-        });
-    }
 
     private void updateCurrentDate() {
         birthdaybox.setText(
@@ -227,54 +101,54 @@ public class RegisterActivity extends ToolBarSimpleActivity implements DatePicke
     private void validateText() {
         boolean check = true;
 
-        if (validateEmptyText(namepasswordbox.getText().toString())) {
+        if (ValidateManager.getInstance().getValidateEmptyText(namepasswordbox.getText().toString())) {
             nametextlayout.setEnabled(true);
             nametextlayout.setError(getResources().getString(R.string.validate_name_empty));
             check = false;
         }
 
-        if (validateEmptyText(lastnamepasswordbox.getText().toString())) {
+        if (ValidateManager.getInstance().getValidateEmptyText(lastnamepasswordbox.getText().toString())) {
             lastnametextlayout.setEnabled(true);
             lastnametextlayout.setError(getResources().getString(R.string.validate_last_name_empty));
             check = false;
         }
 
-        if (validateEmptyText(emailbox.getText().toString())) {
+        if (ValidateManager.getInstance().getValidateEmptyText(emailbox.getText().toString())) {
             emailtextlayout.setEnabled(true);
             emailtextlayout.setError(getResources().getString(R.string.validate_email_empty));
             check = false;
         } else {
-            if (validateEmail(emailbox.getText().toString())) {
+            if (ValidateManager.getInstance().getValidateEmail(emailbox.getText().toString())) {
                 emailtextlayout.setEnabled(true);
                 emailtextlayout.setError(getResources().getString(R.string.validate_email_format));
                 check = false;
             }
         }
 
-        if (validateEmptyText(passwordbox.getText().toString())) {
+        if (ValidateManager.getInstance().getValidateEmptyText(passwordbox.getText().toString())) {
             passwordtextlayout.setEnabled(true);
             passwordtextlayout.setError(getResources().getString(R.string.msg_validate_password));
             check = false;
         }
 
-        if (validateEmptyText(confirmpasswordbox.getText().toString())) {
+        if (ValidateManager.getInstance().getValidateEmptyText(confirmpasswordbox.getText().toString())) {
             confirmpasswordtextlayout.setEnabled(true);
             confirmpasswordtextlayout.setError(getResources().getString(R.string.msg_validate_password));
             check = false;
         } else {
-            if (validateConfirmPasswordNotMatch(passwordbox.getText().toString(), confirmpasswordbox.getText().toString())) {
+            if (ValidateManager.getInstance().getValidateConfirmPasswordNotMatch(passwordbox.getText().toString(), confirmpasswordbox.getText().toString())) {
                 confirmpasswordtextlayout.setEnabled(true);
                 confirmpasswordtextlayout.setError(getResources().getString(R.string.msg_validate_password_not_match));
                 check = false;
             }
         }
 
-        if(validateEmptyText(phonebox.getText().toString())){
+        if (ValidateManager.getInstance().getValidateEmptyText(phonebox.getText().toString())) {
             phonetextlayout.setEnabled(true);
             phonetextlayout.setError(getResources().getString(R.string.validate_phone_empty));
             check = false;
-        }else {
-            if(validatePhone(phonebox.getText().toString())){
+        } else {
+            if (ValidateManager.getInstance().getValidatePhone(phonebox.getText().toString())) {
                 phonetextlayout.setEnabled(true);
                 phonetextlayout.setError(getResources().getString(R.string.validate_phone_format));
                 check = false;
@@ -282,7 +156,7 @@ public class RegisterActivity extends ToolBarSimpleActivity implements DatePicke
         }
 
         if (check) {
-            shortToast("Success");
+            Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
         }
 
         hideKeyboard();

@@ -6,6 +6,7 @@
 
     <color name="colorToolBar">@color/blue_primary</color>
 
+    <color name="dark_red">#BC3F30</color>
     <color name="red">#EC183C</color>
     <color name="dark_green">#00b823</color>
     <color name="green">#00cb26</color>
@@ -15,9 +16,9 @@
     <color name="dark_blue_primary">#1e81ae</color>
     <color name="blue">#00AEC5</color>
     <color name="light_blue">#2BD3EA</color>
-    <color name="dark_yellow">#F77A00</color>
-    <color name="yellow">#F89200</color>
-    <color name="light_yellow">#FFBD3E</color>
+    <color name="dark_organce">#F77A00</color>
+    <color name="organce">#F89200</color>
+    <color name="light_organce">#FFBD3E</color>
     <color name="dark_gray">#6B6B6B</color>
     <color name="gray">#AAAAAA</color>
     <color name="dark_blue_gray">#8CA7B2</color>
@@ -47,8 +48,8 @@
     <color name="text_black">@color/dark_gray</color>
     <color name="text_gray">#9c9c9c</color>
 
-    <color name="button_yellow_normal">@color/yellow</color>
-    <color name="button_yellow_pressed">@color/dark_yellow</color>
+    <color name="button_organce_normal">@color/organce</color>
+    <color name="button_organce_pressed">@color/organce</color>
     <color name="button_green_normal">@color/green</color>
     <color name="button_green_pressed">@color/dark_green</color>
     <color name="button_blue_gray_normal">@color/blue_gray</color>
@@ -65,7 +66,7 @@
     <color name="bg_red">@color/red</color>
     <color name="bg_blue">@color/blue</color>
     <color name="bg_green">@color/green</color>
-    <color name="bg_yellow">@color/yellow</color>
+    <color name="bg_organce">@color/organce</color>
     <color name="bg_white">@color/white</color>
     <color name="bg_extra_light_gray">@color/extra_light_gray</color>
     <color name="bg_edit_text">@color/extra_light_gray</color>

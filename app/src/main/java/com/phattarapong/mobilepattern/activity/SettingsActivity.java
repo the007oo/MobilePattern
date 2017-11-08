@@ -7,6 +7,9 @@ import android.widget.LinearLayout;
 
 import com.phattarapong.mobilepattern.R;
 import com.phattarapong.mobilepattern.baseactivity.ToolBarNotificationActivity;
+import com.phattarapong.mobilepattern.manager.LocaleManager;
+
+import static android.provider.MediaStore.Video.VideoColumns.LANGUAGE;
 
 
 public class SettingsActivity extends ToolBarNotificationActivity {
@@ -31,9 +34,9 @@ public class SettingsActivity extends ToolBarNotificationActivity {
 
         flagLanguageImageView = (ImageView) findViewById(R.id.flagLanguageImageView);
 
-        if (getLanguage().equals("th")) {
+        if (settingPreference.getValueString(LANGUAGE).equals("th")) {
             flagLanguageImageView.setImageResource(R.drawable.ic_en_flag);
-        } else if (getLanguage().equals("en")) {
+        } else if (settingPreference.getValueString(LANGUAGE).equals("en")) {
             flagLanguageImageView.setImageResource(R.drawable.ic_th_flag);
         }
 
@@ -55,16 +58,22 @@ public class SettingsActivity extends ToolBarNotificationActivity {
 
     }
 
+    private void changeLanguage() {
+        if (settingPreference.getValueString(LANGUAGE).equals("th")) {
+            LocaleManager.getInstance().setNewLocale(this, "en");
+            startActivity(getIntent());
+        } else if (settingPreference.getValueString(LANGUAGE).equals("en")) {
+            LocaleManager.getInstance().setNewLocale(this, "th");
+            startActivity(getIntent());
+        }
+    }
+
     @Override
     public void onClick(View v) {
         super.onClick(v);
 
         if (v.getId() == R.id.changeLanguageLayout) {
-            if (getLanguage().equals("th")) {
-                setLanguage("en");
-            } else if (getLanguage().equals("en")) {
-                setLanguage("th");
-            }
+            changeLanguage();
         } else if (v.getId() == R.id.notificationLayout) {
             startActivityNoAnimation(NotificationActivity.class);
         } else if (v.getId() == R.id.changePasswordLayout) {
@@ -80,6 +89,5 @@ public class SettingsActivity extends ToolBarNotificationActivity {
         }
 
     }
-
 
 }

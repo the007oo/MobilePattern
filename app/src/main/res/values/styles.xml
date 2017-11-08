@@ -6,24 +6,33 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
     <style name="AppTheme.NoActionBar.WebView" parent="Theme.AppCompat.DayNight.DarkActionBar">
-        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorPrimaryDark">@color/white</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
     <style name="TextHintColorRed" parent="TextAppearance.Design.Error">
         <!-- Hint color and label color in FALSE state -->
-        <item name="android:textColor">@color/text_red</item>
-        <item name="android:textColorHint">@color/text_red</item>
+        <item name="android:textColor">@color/dark_red</item>
+        <item name="android:textColorHint">@color/dark_red</item>
         <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
-        <item name="colorAccent">@color/text_red</item>
-        <item name="colorControlNormal">@color/text_red</item>
-        <item name="colorControlActivated">@color/text_red</item>
+        <item name="colorAccent">@color/dark_red</item>
+        <item name="colorControlNormal">@color/dark_red</item>
+        <item name="colorControlActivated">@color/dark_red</item>
     </style>
 
     <style name="TextHintColorAccent" parent="TextAppearance.Design.Hint">
@@ -42,22 +51,34 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
+    <style name="TextAppearance.FontRegular" parent="android:TextAppearance">
+        <item name="fontPath">fonts/CSPraKas.otf</item>
+        <item name="android:letterSpacing">-0.05</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+
     <style name="TextAppearance.ButtonNormal" parent="android:TextAppearance">
         <item name="android:textColor">@color/text_white</item>
         <item name="android:textSize">@dimen/default_text_header_normal</item>
     </style>
 
-
     <style name="TextToolBar">
         <item name="android:textAppearance">@style/TextAppearance.FontBold</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">@dimen/default_text_header_extra_large</item>
+        <item name="android:textSize">@dimen/default_text_header_normal</item>
     </style>
 
     <style name="TextToolBar.Sub" parent="TextToolBar">
-        <item name="android:textAppearance">@style/TextAppearance.FontBold</item>
+        <item name="android:textAppearance">@style/TextAppearance.FontRegular</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/default_text_header_normal</item>
+    </style>
+
+    <style name="TextSegment">
+        <item name="android:textAppearance">@style/TextAppearance.FontRegular</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/default_text_body_extra_extra_small</item>
     </style>
 
     <style name="TextHeader">
@@ -68,6 +89,15 @@
     <style name="TextBody">
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/default_text_body_large</item>
+    </style>
+
+    <style name="TextIntro">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/default_text_header_extra_large</item>
+        <item name="android:shadowRadius">10</item>
+        <item name="android:shadowDx">10</item>
+        <item name="android:shadowDy">10</item>
+        <item name="android:shadowColor">@color/black_alpha_40</item>
     </style>
 
     <style name="TextMenuActionBlue">
@@ -88,15 +118,15 @@
 
     <style name="MenuTextView">
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">@dimen/default_text_header_large</item>
+        <item name="android:textSize">@dimen/default_text_header_small</item>
     </style>
 
     <style name="MenuTextView.Sub" parent="MenuTextView">
         <item name="android:textColor">@color/gray</item>
-        <item name="android:textSize">@dimen/default_text_header_small</item>
+        <item name="android:textSize">@dimen/default_text_header_extra_small</item>
     </style>
 
-    <style name="TransparentDialog" parent="Base.V7.ThemeOverlay.AppCompat.Dialog">
+    <style name="TransparentDialog">
         <item name="android:windowFrame">@null</item>
         <item name="android:windowBackground">@color/black_alpha_40</item>
         <item name="android:windowNoTitle">true</item>
@@ -107,6 +137,12 @@
         <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
         <item name="android:backgroundDimEnabled">false</item>
         <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="DatePicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/dark_blue_primary</item>
+        <item name="colorAccent">@color/text_blue</item>
     </style>
 
 </resources>

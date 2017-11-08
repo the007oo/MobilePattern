@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.FontBold" parent="android:TextAppearance">
+        <item name="fontPath">fonts/CSPraKasBold.otf</item>
+        <item name="android:letterSpacing">-0.05</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextAppearance.FontRegular" parent="android:TextAppearance">
+        <item name="fontPath">fonts/CSPraKas.otf</item>
+        <item name="android:letterSpacing">-0.05</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+</resources>

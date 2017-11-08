@@ -5,10 +5,12 @@ import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.phattarapong.mobilepattern.R;
 import com.phattarapong.mobilepattern.baseactivity.ToolBarNotificationActivity;
 import com.phattarapong.mobilepattern.baseactivity.ToolBarSimpleActivity;
+import com.phattarapong.mobilepattern.manager.ValidateManager;
 
 public class ForgetPasswordActivity extends ToolBarSimpleActivity {
 
@@ -38,12 +40,12 @@ public class ForgetPasswordActivity extends ToolBarSimpleActivity {
 
     private void validateText() {
         String msg = "";
-        if (validateEmail(emailbox.getText().toString())) {
+        if (ValidateManager.getInstance().getValidateEmail(emailbox.getText().toString())) {
             msg = getString(R.string.validate_email_format);
         }
 
         if (msg.equals("")) {
-            shortToast("Success");
+            Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
         } else {
             alertDialog(getString(R.string.action_title_alert), msg);
         }

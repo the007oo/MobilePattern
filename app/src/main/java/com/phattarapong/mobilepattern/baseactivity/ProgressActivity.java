@@ -17,7 +17,7 @@ import com.phattarapong.mobilepattern.activity.FeedBackActivity;
  * Created by Phattarapong on 9/15/2017.
  */
 
-public abstract class ProgressActivity extends PermissionActivity {
+public abstract class ProgressActivity extends BaseActivity {
 
     private View loadErrorLayout;
     private View loadingLayout;
@@ -33,36 +33,9 @@ public abstract class ProgressActivity extends PermissionActivity {
 
         errorLabel = (TextView) findViewById(R.id.errorLabel);
         retryButton = (Button) findViewById(R.id.retryButton);
+
     }
 
-    protected boolean validateEmptyText(String text){
-        return text.length() <= 0;
-    }
-
-
-    protected boolean validateEmail(String text) {
-        return !android.util.Patterns.EMAIL_ADDRESS.matcher(text).matches();
-    }
-
-    protected boolean validatePhone(String text){
-        return text.length() <10;
-    }
-
-    protected boolean validatePassword(String text) {
-        return text.length() < 6;
-    }
-
-    protected boolean validateConfirmPasswordNotMatch(String text, String text2) {
-        return text.equals(text2);
-    }
-
-    protected void hideKeyboard() {
-        View view = getCurrentFocus();
-        if (view != null) {
-            ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE)).
-                    hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-        }
-    }
 
     protected void alertDialog(String title, String message) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(ProgressActivity.this);
@@ -102,4 +75,5 @@ public abstract class ProgressActivity extends PermissionActivity {
         loadErrorLayout.setVisibility(View.VISIBLE);
         errorLabel.setText(s);
     }
+
 }

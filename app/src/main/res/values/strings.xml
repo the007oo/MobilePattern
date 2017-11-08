@@ -18,6 +18,14 @@
     <string name="action_error_loading">Error loading data, Please try again later</string>
     <string name="action_next">Next</string>
     <string name="action_title_alert">Alert!!</string>
+    <string name="action_yes">Yes</string>
+    <string name="action_no">No</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_login">Login</string>
+    <string name="action_send_email">Send Email</string>
+    <string name="action_open_photo">Open Photo</string>
+    <string name="action_take_photo">Take a Photo</string>
+    <string name="action_pick_from_gallery">Gallery</string>
 
     <!--Validate-->
     <string name="msg_validate_password">Please fill password at least 6 characters</string>
@@ -32,6 +40,10 @@
     <string name="validate_email_empty">Please fill e-mail</string>
     <string name="validate_phone_empty">Please fill Mobile phone</string>
     <string name="validate_phone_format">Invalid mobile phone</string>
+    <string name="validate_name_shop_emtpy">Please fill Name shop</string>
+    <string name="validate_seller_code_emtpy">Please fill Seller code</string>
+    <string name="validate_full_name_emtpy">Please fill Firstname - lastname</string>
+    <string name="validate_country_emtpy">Please fill Country</string>
 
     <!--Title Activity-->
     <string name="title_activity_settings">Settings</string>

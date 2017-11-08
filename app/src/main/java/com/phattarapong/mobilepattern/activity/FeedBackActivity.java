@@ -4,9 +4,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.phattarapong.mobilepattern.R;
 import com.phattarapong.mobilepattern.baseactivity.ToolBarSimpleActivity;
+import com.phattarapong.mobilepattern.manager.ValidateManager;
 
 public class FeedBackActivity extends ToolBarSimpleActivity {
 
@@ -33,18 +35,18 @@ public class FeedBackActivity extends ToolBarSimpleActivity {
 
     private void validateText() {
         String msg = "";
-        if (validateEmptyText(headerBox.getText().toString())) {
+        if (ValidateManager.getInstance().getValidateEmptyText(headerBox.getText().toString())) {
             msg += getString(R.string.validate_header_feed_back_activity) + "\n";
         }
 
-        if (validateEmptyText(descBox.getText().toString())) {
+        if (ValidateManager.getInstance().getValidateEmptyText(descBox.getText().toString())) {
             msg += getString(R.string.validate_desc_feed_back_activity) + "\n";
         }
 
         if (!msg.equals("")) {
             alertDialog(getString(R.string.action_title_alert), msg);
         } else {
-            shortToast("Success");
+            Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
         }
 
     }

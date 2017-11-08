@@ -14,9 +14,11 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.phattarapong.mobilepattern.R;
 import com.phattarapong.mobilepattern.baseactivity.ToolBarSimpleActivity;
+import com.phattarapong.mobilepattern.manager.ValidateManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -140,32 +142,46 @@ public class ChangePasswordActivity extends ToolBarSimpleActivity {
         String oldPass = oldPasswordBox.getText().toString();
         String newPass = newPasswordBox.getText().toString();
         String confirmPass = confirmPasswordBox.getText().toString();
-
         boolean check = true;
 
-        if (!validateConfirmPasswordNotMatch(newPass, confirmPass)) {
-            confirmPasswordTextLayout.setError(getResources().getString(R.string.msg_validate_password_not_match));
-            check = false;
-        }
-        if (validatePassword(confirmPass)) {
+        if (ValidateManager.getInstance().getValidatePassword(confirmPass)) {
+            confirmPasswordBox.requestFocus();
             confirmPasswordTextLayout.setError(getResources().getString(R.string.msg_validate_password));
             check = false;
-        }
-        if (validatePassword(newPass)) {
-            newPasswordTextLayout.setError(getResources().getString(R.string.msg_validate_password));
-            check = false;
+        } else {
+            if (ValidateManager.getInstance().getValidateConfirmPasswordNotMatch(newPass, confirmPass)) {
+                confirmPasswordBox.requestFocus();
+                confirmPasswordTextLayout.setError(getResources().getString(R.string.msg_validate_password_not_match));
+                check = false;
+            } else {
+                confirmPasswordTextLayout.setErrorEnabled(false);
+                confirmPasswordTextLayout.setError(null);
+            }
         }
 
-        if (validatePassword(oldPass)) {
+        if (ValidateManager.getInstance().getValidatePassword(newPass)) {
+            newPasswordBox.requestFocus();
+            newPasswordTextLayout.setError(getResources().getString(R.string.msg_validate_password));
+            check = false;
+        } else {
+            newPasswordTextLayout.setErrorEnabled(false);
+            newPasswordTextLayout.setError(null);
+        }
+
+        if (ValidateManager.getInstance().getValidatePassword(oldPass)) {
+            oldPasswordBox.requestFocus();
             oldPasswordTextLayout.setError(getResources().getString(R.string.msg_validate_password));
             check = false;
+        } else {
+            oldPasswordTextLayout.setErrorEnabled(false);
+            oldPasswordTextLayout.setError(null);
         }
 
         if (check) {
             confirmPasswordTextLayout.setErrorEnabled(false);
             newPasswordTextLayout.setErrorEnabled(false);
             oldPasswordTextLayout.setErrorEnabled(false);
-            shortToast("Success");
+            Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
         }
 
         hideKeyboard();

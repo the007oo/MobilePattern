@@ -6,8 +6,8 @@ import android.content.SharedPreferences.Editor;
 import android.support.compat.BuildConfig;
 
 
-public class SettingPreference {
-    private static SettingPreference settingPreference = null;
+public class MemberPreference {
+    private static MemberPreference memberPreference = null;
 
     public final String NOTIFICATION = "notification_allow";
     public static final String NOTIFICATION_NEWS = "notification_news";
@@ -33,7 +33,7 @@ public class SettingPreference {
      *
      * @param context
      */
-    public SettingPreference(Context context) {
+    public MemberPreference(Context context) {
         this.context = context;
         int mode = Context.MODE_PRIVATE;
         this.preference = this.context.getSharedPreferences(this.preferenceName, mode);
@@ -46,11 +46,11 @@ public class SettingPreference {
      * @param context
      * @return
      */
-    public static SettingPreference getInstance(Context context) {
-        if (settingPreference == null) {
-            settingPreference = new SettingPreference(context);
+    public static MemberPreference getInstance(Context context) {
+        if (memberPreference == null) {
+            memberPreference = new MemberPreference(context);
         }
-        return settingPreference;
+        return memberPreference;
     }
 
     public void setValueString(String key, String value) {

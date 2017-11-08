@@ -19,6 +19,14 @@
     <string name="action_error_loading">ดาวน์โหลดข้อมูลไม่สำเร็จ กรุณาลองใหม่อีกครั้ง</string>
     <string name="action_next">ถัดไป</string>
     <string name="action_title_alert">แจ้งเตือน!!</string>
+    <string name="action_yes">ใช่</string>
+    <string name="action_no">ไม่ใช่</string>
+    <string name="action_confirm">ยืนยัน</string>
+    <string name="action_login">เข้าสู่ระบบ</string>
+    <string name="action_send_email">ส่งอีเมล์</string>
+    <string name="action_open_photo">เลือกรูป</string>
+    <string name="action_pick_from_gallery">แกลลอรี่</string>
+    <string name="action_take_photo">ถ่ายรูป</string>
 
     <!--Validate-->
     <string name="msg_validate_password">กรุณากรอกอย่างน้อย 6 อักขระ</string>
@@ -33,7 +41,10 @@
     <string name="validate_email_empty">กรุณากรอกอีเมล์</string>
     <string name="validate_phone_empty">กรุณากรอกหมายเลขโทรศัพท์</string>
     <string name="validate_phone_format">รูปแบบหมายเลขโทรศัพท์ผิดพลาด</string>
-
+    <string name="validate_name_shop_emtpy">กรุณากรอกชื่อร้านค้า</string>
+    <string name="validate_seller_code_emtpy">กรุณากรอก Seller code</string>
+    <string name="validate_full_name_emtpy">กรุณากรอกชื่อ - นามสกุล</string>
+    <string name="validate_country_emtpy">กรุณากรอกประเทศ</string>
 
     <!--Title Activity-->
     <string name="title_activity_settings">ตั้งค่า</string>

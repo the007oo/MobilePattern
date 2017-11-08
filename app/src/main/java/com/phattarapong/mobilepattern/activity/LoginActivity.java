@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.phattarapong.mobilepattern.R;
 import com.phattarapong.mobilepattern.baseactivity.ToolBarNotificationActivity;
+import com.phattarapong.mobilepattern.manager.ValidateManager;
 
 public class LoginActivity extends ToolBarNotificationActivity {
 
@@ -51,11 +52,11 @@ public class LoginActivity extends ToolBarNotificationActivity {
 
         String msg = "";
 
-        if (validateEmail(usernamebox.getText().toString())) {
+        if (ValidateManager.getInstance().getValidateEmail(usernamebox.getText().toString())) {
             msg += getString(R.string.validate_email_format) + "\n";
         }
 
-        if (validatePassword(passwordbox.getText().toString())) {
+        if (ValidateManager.getInstance().getValidatePassword(passwordbox.getText().toString())) {
             msg += getString(R.string.validate_password_login_activity) + "\n";
         }
 
