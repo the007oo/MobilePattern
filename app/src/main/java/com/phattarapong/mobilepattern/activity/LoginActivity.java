@@ -5,13 +5,16 @@ import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.phattarapong.mobilepattern.R;
+import com.phattarapong.mobilepattern.baseactivity.OnRequestPermission;
 import com.phattarapong.mobilepattern.baseactivity.ToolBarNotificationActivity;
 import com.phattarapong.mobilepattern.manager.ValidateManager;
 
-public class LoginActivity extends ToolBarNotificationActivity {
+public class LoginActivity extends ToolBarNotificationActivity implements OnRequestPermission {
 
     private TextInputEditText usernamebox;
     private TextInputLayout usernametextlayout;
@@ -20,6 +23,8 @@ public class LoginActivity extends ToolBarNotificationActivity {
     private TextView registerLabel;
     private TextView forgetLabel;
     private Button submitButton;
+
+    private LinearLayout contentLayout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,6 +46,7 @@ public class LoginActivity extends ToolBarNotificationActivity {
         passwordbox = (TextInputEditText) findViewById(R.id.passwordBox);
         usernametextlayout = (TextInputLayout) findViewById(R.id.userNameTextLayout);
         usernamebox = (TextInputEditText) findViewById(R.id.userNameBox);
+        contentLayout = findViewById(R.id.contentLayout);
 
         submitButton.setOnClickListener(this);
         forgetLabel.setOnClickListener(this);
@@ -61,8 +67,8 @@ public class LoginActivity extends ToolBarNotificationActivity {
         }
 
         if (msg.equals("")) {
-            finish();
-            startActivityNoAnimation(SettingsActivity.class);
+            requestMultiplePermission(LoginActivity.this, contentLayout);
+            setOnSelectPermission(this);
         } else {
             alertDialog(getString(R.string.action_title_alert), msg);
         }
@@ -80,4 +86,16 @@ public class LoginActivity extends ToolBarNotificationActivity {
             startActivityNoAnimation(RegisterActivity.class);
         }
     }
+
+    @Override
+    public void onGranted() {
+        finish();
+        startActivityNoAnimation(SettingsActivity.class);
+    }
+
+    @Override
+    public void onDenied() {
+
+    }
+
 }

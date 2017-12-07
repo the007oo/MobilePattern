@@ -53,7 +53,8 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/MenuTextView"
+                            android:textSize="@dimen/default_text_header_small"
+                            android:textColor="@color/black"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
@@ -112,7 +113,8 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/MenuTextView"
+                            android:textSize="@dimen/default_text_header_small"
+                            android:textColor="@color/black"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
@@ -171,7 +173,8 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/MenuTextView"
+                            android:textSize="@dimen/default_text_header_small"
+                            android:textColor="@color/black"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
@@ -248,7 +251,8 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/MenuTextView"
+                            android:textSize="@dimen/default_text_header_small"
+                            android:textColor="@color/black"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
@@ -256,7 +260,8 @@
                             android:textAppearance="@style/TextAppearance.FontBold" />
 
                         <TextView
-                            style="@style/MenuTextView.Sub"
+                            android:textSize="@dimen/default_text_header_extra_small"
+                            android:textColor="@color/gray"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
@@ -323,7 +328,8 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/MenuTextView"
+                            android:textSize="@dimen/default_text_header_small"
+                            android:textColor="@color/black"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
@@ -384,7 +390,8 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/MenuTextView"
+                            android:textSize="@dimen/default_text_header_small"
+                            android:textColor="@color/black"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
@@ -444,7 +451,8 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/MenuTextView"
+                            android:textSize="@dimen/default_text_header_small"
+                            android:textColor="@color/black"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"

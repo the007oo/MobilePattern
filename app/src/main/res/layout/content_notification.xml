@@ -17,13 +17,14 @@
         android:background="@color/bg_divider" />
 
     <RelativeLayout
-        style="@style/MenuPadding"
+        android:padding="@dimen/default_margin_padding_large"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white">
 
         <TextView
-            style="@style/MenuTextView"
+            android:textSize="@dimen/default_text_header_small"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/menu_notification_activity_allow"
@@ -58,13 +59,17 @@
             android:background="@color/bg_divider" />
 
         <RelativeLayout
-            style="@style/MenuPadding.NoPaddingDown"
+            android:paddingLeft="@dimen/default_margin_padding_large"
+            android:paddingTop="@dimen/default_margin_padding_large"
+            android:paddingRight="@dimen/default_margin_padding_large"
+            android:paddingBottom="0dp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/bottom_bar_height"
             android:background="@color/white">
 
             <TextView
-                style="@style/MenuTextView"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_header_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/menu_notification_activity_news"
@@ -86,13 +91,17 @@
         </RelativeLayout>
 
         <RelativeLayout
-            style="@style/MenuPadding.NoPaddingDown"
+            android:paddingBottom="0dp"
+            android:paddingTop="@dimen/default_margin_padding_large"
+            android:paddingLeft="@dimen/default_margin_padding_large"
+            android:paddingRight="@dimen/default_margin_padding_large"
             android:layout_width="match_parent"
             android:layout_height="@dimen/bottom_bar_height"
             android:background="@color/white">
 
             <TextView
-                style="@style/MenuTextView"
+                android:textSize="@dimen/default_text_header_small"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/menu_notification_activity_promotion"
@@ -115,13 +124,17 @@
         </RelativeLayout>
 
         <RelativeLayout
-            style="@style/MenuPadding"
+            android:paddingBottom="@dimen/default_margin_padding_large"
+            android:paddingRight="@dimen/default_margin_padding_large"
+            android:paddingTop="@dimen/default_margin_padding_large"
+            android:paddingLeft="@dimen/default_margin_padding_large"
             android:layout_width="match_parent"
             android:layout_height="@dimen/bottom_bar_height"
             android:background="@color/white">
 
             <TextView
-                style="@style/MenuTextView"
+                android:textSize="@dimen/default_text_header_small"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/menu_notification_activity_order"

@@ -10,6 +10,7 @@
     <include layout="@layout/layout_tool_bar_notification" />
 
     <LinearLayout
+        android:id="@+id/contentLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
